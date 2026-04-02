@@ -15,7 +15,8 @@
             <p class="oe_mt16">
                 Embed a fully functional solar panel cost and savings calculator on your Odoo
                 website. Your visitors can estimate system size, installation cost, annual savings,
-                and payback period — all without leaving your site.
+                and payback period — all without leaving your site. No account or activation key
+                required. The module is fully functional out of the box.
             </p>
         </div>
     </div>
@@ -23,7 +24,7 @@
 
 <section class="oe_container oe_dark">
     <div class="oe_row oe_spaced">
-        <h2>Free Features</h2>
+        <h2>Features</h2>
         <div class="oe_span4">
             <h3>Drag &amp; Drop</h3>
             <p>Add the calculator to any page using the Odoo Website Builder. No coding required. No account needed.</p>
@@ -34,32 +35,29 @@
         </div>
         <div class="oe_span4">
             <h3>Always Up-to-Date</h3>
-            <p>The calculator runs on Solar-Estimator.io — pricing data, features, and fixes update automatically.</p>
+            <p>Calculator data and features update automatically. No module updates needed for new pricing or features.</p>
         </div>
     </div>
 </section>
 
 <section class="oe_container">
     <div class="oe_row oe_spaced">
-        <h2>Pro Features (License Key Required)</h2>
-        <div class="oe_span6">
-            <h3>Lead Capture Gate</h3>
-            <p>Gate calculator results behind a contact form. Visitors enter their name, email, and phone number before seeing their solar estimate. Perfect for solar installers generating leads.</p>
-        </div>
-        <div class="oe_span6">
-            <h3>Email Notifications</h3>
-            <p>Receive an email for every lead with their full contact details and solar estimate breakdown (system size, cost, savings, payback period). Respond quickly to maximise conversions.</p>
-        </div>
-        <div class="oe_span12 mt-3">
-            <p><strong>Get your license key:</strong> Visit
-                <a href="https://www.solar-estimator.io/odoo" target="_blank">solar-estimator.io/odoo</a>
-                to purchase a Pro license.
-            </p>
-        </div>
+        <h2>Optional Lead Capture Integration</h2>
+        <p class="oe_mt16">
+            This module optionally supports lead capture via the Solar Estimator external service.
+            When enabled, visitors enter their contact details before viewing results.
+            This feature requires a separate subscription with the service provider and is
+            entirely optional — the calculator works fully without it.
+        </p>
+        <p>
+            <strong>User opt-in required:</strong> Lead capture is only active when the site
+            administrator explicitly configures it by entering service credentials in the
+            snippet options. No data is collected or transmitted without administrator action.
+        </p>
     </div>
 </section>
 
-<section class="oe_container">
+<section class="oe_container oe_dark">
     <div class="oe_row oe_spaced">
         <h2>Calculator Capabilities</h2>
         <div class="oe_span6">
@@ -85,7 +83,7 @@
     </div>
 </section>
 
-<section class="oe_container oe_dark">
+<section class="oe_container">
     <div class="oe_row oe_spaced">
         <h2>How to Use</h2>
         <div class="oe_span12">
@@ -101,7 +99,7 @@
     </div>
 </section>
 
-<section class="oe_container">
+<section class="oe_container oe_dark">
     <div class="oe_row oe_spaced">
         <h2>Customisation Options</h2>
         <table class="table table-bordered">
@@ -123,8 +121,6 @@
                 <tr><td>Font Size</td><td>Small, Normal, Large</td><td>Normal</td></tr>
                 <tr><td>Compass Style</td><td>Visual or Dropdown</td><td>Visual</td></tr>
                 <tr><td>Tracking Reference</td><td>Any string</td><td>None</td></tr>
-                <tr><td>License Key (Pro)</td><td>License key string</td><td>None (free mode)</td></tr>
-                <tr><td>Lead Capture Email (Pro)</td><td>Email address</td><td>Off</td></tr>
                 <tr><td>Hide Sections</td><td>location, roof, battery, panels, advanced, setup</td><td>None</td></tr>
             </tbody>
         </table>
@@ -133,10 +129,25 @@
 
 <section class="oe_container">
     <div class="oe_row oe_spaced">
-        <div class="oe_span12 text-center">
+        <h2>External Service &amp; Data Disclosure</h2>
+        <div class="oe_span12">
             <p>
-                Calculator powered by
-                <a href="https://www.solar-estimator.io" target="_blank">Solar-Estimator.io</a>
+                This module requires an internet connection. The calculator is loaded via an
+                embedded iframe from the Solar Estimator service (solar-estimator.io).
+            </p>
+            <p><strong>Data transmitted to the external service:</strong></p>
+            <ul>
+                <li>Calculator inputs entered by the website visitor (electricity bill, country,
+                    home size, roof orientation) — these are processed in the browser and not
+                    stored on external servers</li>
+                <li>If lead capture is enabled by the administrator: visitor-submitted contact
+                    details (name, email, phone) are sent to the external service for email
+                    notification delivery</li>
+            </ul>
+            <p>
+                No data is collected or transmitted without explicit administrator configuration.
+                The module is fully functional without enabling any external data transmission
+                features.
             </p>
         </div>
     </div>

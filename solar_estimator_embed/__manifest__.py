@@ -8,10 +8,11 @@ Solar Estimator Embed
 =====================
 
 Add a professional solar panel cost and savings calculator to your Odoo
-website with a simple drag-and-drop snippet.
+website with a simple drag-and-drop snippet. No account or activation
+key required — the module is fully functional out of the box.
 
-FREE features (no account required)
-------------------------------------
+Features
+--------
 * Full solar system estimator: cost, savings, payback, panel count
 * Battery storage calculator and interactive solar map
 * Supports US, UK, Australia, Canada, New Zealand, Ireland, Spain
@@ -19,24 +20,34 @@ FREE features (no account required)
 * Auto-resizing iframe — adapts to content height automatically
 * Mobile responsive
 
-PRO features (license key required)
-------------------------------------
-* Lead capture gate — collect visitor name, email, and phone before
-  showing results
-* Email notifications — receive leads directly to your inbox with full
-  solar estimate details
-* Get your license key at https://www.solar-estimator.io/odoo
+Optional lead capture integration
+----------------------------------
+This module optionally supports lead capture via the Solar Estimator
+external service. When enabled by the administrator, visitors enter
+their contact details before viewing results. This is entirely optional
+and the calculator works fully without it.
+
+External service & data disclosure
+-----------------------------------
+This module requires an internet connection. The calculator is loaded
+via an embedded iframe from the Solar Estimator service.
+
+Data transmitted:
+* Calculator inputs are processed in the visitor's browser and are not
+  stored on external servers.
+* If lead capture is enabled: visitor-submitted contact details (name,
+  email, phone) are sent to the external service for email notification.
+
+No data is collected or transmitted without explicit administrator
+configuration.
 
 Usage
 -----
 1. Install the module
 2. Open your website in the Odoo Website Builder
-3. Drag the "Solar Estimator" snippet from the Features section onto your page
+3. Drag the "Solar Estimator" snippet from the Features section
 4. Click the snippet to customise: theme, accent colour, tools
-5. (Optional) Enter your license key and email to enable lead capture
-6. Save and publish
-
-Calculator powered by https://www.solar-estimator.io
+5. Save and publish
     """,
     "author": "Solar Estimator",
     "website": "https://www.solar-estimator.io",
