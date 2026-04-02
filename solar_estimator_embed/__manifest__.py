@@ -50,7 +50,7 @@ Usage
 5. Save and publish
     """,
     "author": "Solar Estimator",
-    "website": "https://www.solar-estimator.io",
+    "website": "https://www.solar-estimator.io/odoo",
     "license": "LGPL-3",
     "depends": ["website"],
     "data": [
@@ -67,7 +67,7 @@ Usage
         ],
     },
     "images": [
-        "static/description/banner.svg",
+        "static/description/banner.png",
     ],
     "price": 0,
     "currency": "EUR",
