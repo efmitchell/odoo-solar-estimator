@@ -10,26 +10,31 @@ Solar Estimator Embed
 Add a professional solar panel cost and savings calculator to your Odoo
 website with a simple drag-and-drop snippet.
 
-Features
---------
-* Drag-and-drop website building block — no coding required
+FREE features (no account required)
+------------------------------------
 * Full solar system estimator: cost, savings, payback, panel count
-* Optional battery storage calculator
-* Optional interactive solar map estimator
+* Battery storage calculator and interactive solar map
 * Supports US, UK, Australia, Canada, New Zealand, Ireland, Spain
-* Lead capture gate — collect visitor contact details before showing results
 * Fully customisable: colours, theme, layout, visible sections
 * Auto-resizing iframe — adapts to content height automatically
 * Mobile responsive
-* "Powered by Solar-Estimator.io" attribution
+
+PRO features (license key required)
+------------------------------------
+* Lead capture gate — collect visitor name, email, and phone before
+  showing results
+* Email notifications — receive leads directly to your inbox with full
+  solar estimate details
+* Get your license key at https://www.solar-estimator.io/embed/customize
 
 Usage
 -----
 1. Install the module
 2. Open your website in the Odoo Website Builder
 3. Drag the "Solar Estimator" snippet from the Features section onto your page
-4. Click the snippet to customise: theme, accent colour, tools, lead capture
-5. Save and publish
+4. Click the snippet to customise: theme, accent colour, tools
+5. (Optional) Enter your license key and email to enable lead capture
+6. Save and publish
 
 Calculator powered by https://www.solar-estimator.io
     """,

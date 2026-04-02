@@ -17,7 +17,7 @@
                  data-se-padding="normal"
                  data-se-fontsize="base"
                  data-se-ref=""
-                 data-se-leadgate=""
+                 data-se-key=""
                  data-se-leademail=""
                  data-se-hide=""
                  data-se-compass="visual">
@@ -149,23 +149,28 @@
                     <we-button data-select-data-attribute="dropdown" string="Dropdown"/>
                 </we-select>
 
-                <!-- Lead capture -->
-                <we-input string="Lead Capture Email"
-                          data-attribute-name="seLeademail"
-                          data-attribute-default-value=""
-                          placeholder="your@email.com"/>
-
-                <!-- Tracking ref -->
+                <!-- Tracking ref (free) -->
                 <we-input string="Tracking Reference"
                           data-attribute-name="seRef"
                           data-attribute-default-value=""
                           placeholder="my-odoo-site"/>
 
-                <!-- Hidden sections -->
+                <!-- Hidden sections (free) -->
                 <we-input string="Hide Sections"
                           data-attribute-name="seHide"
                           data-attribute-default-value=""
                           placeholder="e.g. battery,advanced"/>
+
+                <!-- Lead capture (paid) -->
+                <we-input string="License Key (Pro)"
+                          data-attribute-name="seKey"
+                          data-attribute-default-value=""
+                          placeholder="Enter license key for lead capture"/>
+
+                <we-input string="Lead Capture Email (Pro)"
+                          data-attribute-name="seLeademail"
+                          data-attribute-default-value=""
+                          placeholder="Leads sent to this email"/>
 
             </div>
         </xpath>

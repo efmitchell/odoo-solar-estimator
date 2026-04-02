@@ -88,7 +88,7 @@ options.registry.SolarEstimatorOptions = options.Class.extend({
             seTools: "tools", seTheme: "theme", seAccent: "accent",
             seRadius: "radius", seBorder: "border", seShadow: "shadow",
             sePadding: "padding", seFontsize: "fontsize", seRef: "ref",
-            seLeademail: "leademail", seHide: "hide", seCompass: "compass",
+            seHide: "hide", seCompass: "compass",
         };
 
         const params = new URLSearchParams();
@@ -97,14 +97,16 @@ options.registry.SolarEstimatorOptions = options.Class.extend({
             const value = (section.dataset[dataKey] || "").trim();
             if (!value) continue;
             if (DEFAULTS[param] && value === DEFAULTS[param]) continue;
-
-            if (param === "leademail" && value) {
-                params.set("leadgate", "1");
-                params.set("leademail", value);
-                continue;
-            }
-
             params.set(param, value);
+        }
+
+        // Lead capture: requires both license key and email
+        const key = (section.dataset.seKey || "").trim();
+        const leademail = (section.dataset.seLeademail || "").trim();
+        if (key && leademail) {
+            params.set("key", key);
+            params.set("leadgate", "1");
+            params.set("leademail", leademail);
         }
 
         const qs = params.toString();

@@ -23,7 +23,7 @@ publicWidget.registry.SolarEstimatorFrontend = publicWidget.Widget.extend({
         "se-padding":   "padding",
         "se-fontsize":  "fontsize",
         "se-ref":       "ref",
-        "se-leadgate":  "leadgate",
+        "se-key":       "key",
         "se-leademail": "leademail",
         "se-hide":      "hide",
         "se-compass":   "compass",
@@ -110,15 +110,20 @@ publicWidget.registry.SolarEstimatorFrontend = publicWidget.Widget.extend({
             // Skip if it matches the default
             if (this.DEFAULTS[param] && value === this.DEFAULTS[param]) continue;
 
-            // Lead gate: only include if leademail is set
-            if (param === "leadgate") continue; // handled below
-            if (param === "leademail" && value) {
-                params.set("leadgate", "1");
-                params.set("leademail", value);
-                continue;
-            }
+            // Lead gate: only enable if both key AND leademail are set
+            if (param === "leademail") continue; // handled below
+            if (param === "key") continue; // handled below
 
             params.set(param, value);
+        }
+
+        // Lead capture: requires both license key and email
+        const key = (this.el.dataset[this._toCamel("se-key")] || "").trim();
+        const leademail = (this.el.dataset[this._toCamel("se-leademail")] || "").trim();
+        if (key && leademail) {
+            params.set("key", key);
+            params.set("leadgate", "1");
+            params.set("leademail", leademail);
         }
 
         const qs = params.toString();

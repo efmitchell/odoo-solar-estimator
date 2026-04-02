@@ -25,26 +25,47 @@ Search for "Solar Estimator Embed" on [apps.odoo.com](https://apps.odoo.com).
 5. Customise theme, colours, tools, lead capture, etc.
 6. **Save** and publish
 
+## Free vs Pro
+
+| Feature | Free | Pro |
+|---------|------|-----|
+| Full solar calculator | Yes | Yes |
+| Battery storage calculator | Yes | Yes |
+| Interactive solar map | Yes | Yes |
+| Customisable theme & colours | Yes | Yes |
+| Section visibility controls | Yes | Yes |
+| Tracking reference | Yes | Yes |
+| **Lead capture gate** | No | **Yes** |
+| **Email notifications** | No | **Yes** |
+
 ## Customisation Options
 
-| Setting | Options | Default |
-|---------|---------|---------|
-| Calculator Tools | Calculator, Map, or Both | Calculator Only |
-| Theme | Light, Dark | Light |
-| Accent Colour | Any hex colour | #f59e0b (amber) |
-| Border Radius | 0–24px | 12px |
-| Border Style | None, Thin, Thick | None |
-| Shadow | None, Small, Medium, Large | None |
-| Padding | Compact, Normal, Spacious | Normal |
-| Font Size | Small, Normal, Large | Normal |
-| Compass Style | Visual, Dropdown | Visual |
-| Lead Capture Email | Email address | Off |
-| Tracking Reference | Any string | None |
-| Hide Sections | location, roof, battery, panels, advanced, setup | None |
+| Setting | Options | Default | Tier |
+|---------|---------|---------|------|
+| Calculator Tools | Calculator, Map, or Both | Calculator Only | Free |
+| Theme | Light, Dark | Light | Free |
+| Accent Colour | Any hex colour | #f59e0b (amber) | Free |
+| Border Radius | 0–24px | 12px | Free |
+| Border Style | None, Thin, Thick | None | Free |
+| Shadow | None, Small, Medium, Large | None | Free |
+| Padding | Compact, Normal, Spacious | Normal | Free |
+| Font Size | Small, Normal, Large | Normal | Free |
+| Compass Style | Visual, Dropdown | Visual | Free |
+| Tracking Reference | Any string | None | Free |
+| Hide Sections | location, roof, battery, panels, advanced, setup | None | Free |
+| License Key | License key string | None | Pro |
+| Lead Capture Email | Email address | Off | Pro |
 
-## Lead Capture
+## Lead Capture (Pro)
 
-Enter an email address in the **Lead Capture Email** option to gate calculator results behind a contact form. When a visitor submits their details, you receive an email notification with their contact info and solar estimate.
+Lead capture requires a license key. To enable it:
+
+1. Get a license key from [solar-estimator.io/embed/customize](https://www.solar-estimator.io/embed/customize)
+2. Enter the key in the **License Key (Pro)** snippet option
+3. Enter your email in the **Lead Capture Email (Pro)** option
+4. Save and publish
+
+When a visitor submits their details, you receive an email with their contact info and full solar estimate (system size, cost, savings, payback).
 
 ## Supported Countries
 
