@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- ================================================================== -->
+    <!-- SNIPPET TEMPLATE — the actual HTML dropped onto the page           -->
+    <!-- ================================================================== -->
+    <template id="s_solar_estimator" name="Solar Estimator">
+        <section class="s_solar_estimator o_cc o_cc1 pt32 pb32"
+                 data-snippet="s_solar_estimator"
+                 data-name="Solar Estimator"
+                 data-se-tools="calculator"
+                 data-se-theme="light"
+                 data-se-accent="#f59e0b"
+                 data-se-radius="12"
+                 data-se-border="none"
+                 data-se-shadow="none"
+                 data-se-padding="normal"
+                 data-se-fontsize="base"
+                 data-se-ref=""
+                 data-se-leadgate=""
+                 data-se-leademail=""
+                 data-se-hide=""
+                 data-se-compass="visual">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="s_solar_estimator_wrapper" contenteditable="false">
+                            <!-- iframe injected by frontend JS -->
+                            <div class="s_solar_estimator_loading text-center py-5">
+                                <div class="spinner-border text-warning" role="status">
+                                    <span class="visually-hidden">Loading calculator...</span>
+                                </div>
+                                <p class="mt-3 text-muted">Loading Solar Estimator...</p>
+                            </div>
+                        </div>
+                        <p class="s_solar_estimator_attribution text-center mt-2"
+                           style="font-size: 12px; color: #9ca3af;">
+                            Calculator by
+                            <a href="https://www.solar-estimator.io"
+                               style="color: #d97706; text-decoration: none;"
+                               target="_blank" rel="noopener">Solar-Estimator.io</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <!-- ================================================================== -->
+    <!-- REGISTER SNIPPET in the Website Builder palette                    -->
+    <!-- ================================================================== -->
+    <template id="solar_estimator_snippet"
+              inherit_id="website.snippets" name="Solar Estimator Snippet">
+        <xpath expr="//snippets[@id='snippet_feature']" position="inside">
+            <t t-snippet="solar_estimator_embed.s_solar_estimator"
+               t-thumbnail="/solar_estimator_embed/static/src/img/snippet_thumb.svg"/>
+        </xpath>
+    </template>
+
+    <!-- ================================================================== -->
+    <!-- SNIPPET OPTIONS — the right-hand panel in the Website Builder      -->
+    <!-- ================================================================== -->
+    <template id="solar_estimator_options"
+              inherit_id="website.snippet_options" name="Solar Estimator Options">
+        <xpath expr="." position="inside">
+            <div data-js="SolarEstimatorOptions"
+                 data-selector=".s_solar_estimator">
+
+                <!-- Tools -->
+                <we-select string="Calculator Tools"
+                           data-attribute-name="seTools"
+                           data-attribute-default-value="calculator">
+                    <we-button data-select-data-attribute="calculator"
+                               string="Calculator Only"/>
+                    <we-button data-select-data-attribute="map"
+                               string="Map Only"/>
+                    <we-button data-select-data-attribute="calculator,map"
+                               string="Calculator + Map"/>
+                </we-select>
+
+                <!-- Theme -->
+                <we-select string="Theme"
+                           data-attribute-name="seTheme"
+                           data-attribute-default-value="light">
+                    <we-button data-select-data-attribute="light"
+                               string="Light"/>
+                    <we-button data-select-data-attribute="dark"
+                               string="Dark"/>
+                </we-select>
+
+                <!-- Accent colour -->
+                <we-colorpicker string="Accent Colour"
+                                data-attribute-name="seAccent"
+                                data-attribute-default-value="#f59e0b"/>
+
+                <!-- Border radius -->
+                <we-select string="Border Radius"
+                           data-attribute-name="seRadius"
+                           data-attribute-default-value="12">
+                    <we-button data-select-data-attribute="0"  string="None (0px)"/>
+                    <we-button data-select-data-attribute="8"  string="Small (8px)"/>
+                    <we-button data-select-data-attribute="12" string="Medium (12px)"/>
+                    <we-button data-select-data-attribute="16" string="Large (16px)"/>
+                    <we-button data-select-data-attribute="24" string="Extra Large (24px)"/>
+                </we-select>
+
+                <!-- Border -->
+                <we-select string="Border Style"
+                           data-attribute-name="seBorder"
+                           data-attribute-default-value="none">
+                    <we-button data-select-data-attribute="none"  string="None"/>
+                    <we-button data-select-data-attribute="thin"  string="Thin"/>
+                    <we-button data-select-data-attribute="thick" string="Thick"/>
+                </we-select>
+
+                <!-- Shadow -->
+                <we-select string="Shadow"
+                           data-attribute-name="seShadow"
+                           data-attribute-default-value="none">
+                    <we-button data-select-data-attribute="none" string="None"/>
+                    <we-button data-select-data-attribute="sm"   string="Small"/>
+                    <we-button data-select-data-attribute="md"   string="Medium"/>
+                    <we-button data-select-data-attribute="lg"   string="Large"/>
+                </we-select>
+
+                <!-- Padding -->
+                <we-select string="Padding"
+                           data-attribute-name="sePadding"
+                           data-attribute-default-value="normal">
+                    <we-button data-select-data-attribute="compact"  string="Compact"/>
+                    <we-button data-select-data-attribute="normal"   string="Normal"/>
+                    <we-button data-select-data-attribute="spacious" string="Spacious"/>
+                </we-select>
+
+                <!-- Font size -->
+                <we-select string="Font Size"
+                           data-attribute-name="seFontsize"
+                           data-attribute-default-value="base">
+                    <we-button data-select-data-attribute="sm"   string="Small"/>
+                    <we-button data-select-data-attribute="base" string="Normal"/>
+                    <we-button data-select-data-attribute="lg"   string="Large"/>
+                </we-select>
+
+                <!-- Compass style -->
+                <we-select string="Compass Style"
+                           data-attribute-name="seCompass"
+                           data-attribute-default-value="visual">
+                    <we-button data-select-data-attribute="visual"   string="Visual"/>
+                    <we-button data-select-data-attribute="dropdown" string="Dropdown"/>
+                </we-select>
+
+                <!-- Lead capture -->
+                <we-input string="Lead Capture Email"
+                          data-attribute-name="seLeademail"
+                          data-attribute-default-value=""
+                          placeholder="your@email.com"/>
+
+                <!-- Tracking ref -->
+                <we-input string="Tracking Reference"
+                          data-attribute-name="seRef"
+                          data-attribute-default-value=""
+                          placeholder="my-odoo-site"/>
+
+                <!-- Hidden sections -->
+                <we-input string="Hide Sections"
+                          data-attribute-name="seHide"
+                          data-attribute-default-value=""
+                          placeholder="e.g. battery,advanced"/>
+
+            </div>
+        </xpath>
+    </template>
+
+</odoo>

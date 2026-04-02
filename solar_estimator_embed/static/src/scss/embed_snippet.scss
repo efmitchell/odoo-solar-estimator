@@ -1,0 +1,56 @@
+// ==========================================================================
+// Solar Estimator Embed — Snippet Styles
+// ==========================================================================
+
+.s_solar_estimator {
+
+    // Wrapper around the iframe
+    .s_solar_estimator_wrapper {
+        position: relative;
+        width: 100%;
+        min-height: 400px;
+
+        iframe {
+            width: 100%;
+            display: block;
+            transition: height 0.2s ease;
+        }
+    }
+
+    // Loading spinner shown before iframe loads
+    .s_solar_estimator_loading {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 400px;
+
+        .spinner-border {
+            width: 2.5rem;
+            height: 2.5rem;
+        }
+    }
+
+    // Attribution line below the calculator
+    .s_solar_estimator_attribution {
+        font-size: 12px;
+        color: #9ca3af;
+        margin-top: 0.5rem;
+
+        a {
+            color: #d97706;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+// In the website editor, reduce interactivity
+.o_editable .s_solar_estimator {
+    .s_solar_estimator_wrapper iframe {
+        pointer-events: none;
+    }
+}
