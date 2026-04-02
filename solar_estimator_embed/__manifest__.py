@@ -58,6 +58,8 @@ Calculator powered by https://www.solar-estimator.io
     "images": [
         "static/description/banner.svg",
     ],
+    "price": 0,
+    "currency": "EUR",
     "installable": True,
     "auto_install": False,
     "application": False,
