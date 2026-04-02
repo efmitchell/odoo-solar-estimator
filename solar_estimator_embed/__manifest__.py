@@ -25,7 +25,7 @@ PRO features (license key required)
   showing results
 * Email notifications — receive leads directly to your inbox with full
   solar estimate details
-* Get your license key at https://www.solar-estimator.io/embed/customize
+* Get your license key at https://www.solar-estimator.io/odoo
 
 Usage
 -----

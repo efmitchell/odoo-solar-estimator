@@ -60,7 +60,7 @@ Search for "Solar Estimator Embed" on [apps.odoo.com](https://apps.odoo.com).
 
 Lead capture requires a license key. To enable it:
 
-1. Get a license key from [solar-estimator.io/embed/customize](https://www.solar-estimator.io/embed/customize)
+1. Get a license key from [solar-estimator.io/odoo](https://www.solar-estimator.io/odoo)
 2. Enter the key in the **License Key (Pro)** snippet option
 3. Enter your email in the **Lead Capture Email (Pro)** option
 4. Save and publish
